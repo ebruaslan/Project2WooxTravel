@@ -1,0 +1,33 @@
+﻿@model Project2WooxTravel.Entities.Admin
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /> <br />
+    <div class="alert alert-primary">
+        <h3>
+            Yeni Kullanıcı Kayıt Sayfası
+        </h3>
+        <label>Adınız</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <br />
+
+        <label>Soyadınız</label>
+        @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+        <br />
+
+        <label>EMail Adresiniz</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+        <br />
+
+        <label>Kullanıcı Adınız</label>
+        @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+        <br />
+
+        <label>Şifreniz</label>
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+        <br />
+    </div>
+</div>
