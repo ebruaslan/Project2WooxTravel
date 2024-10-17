@@ -18,5 +18,11 @@ namespace Project2WooxTravel.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult PartialScript()
+        {
+            return PartialView();
+        }
+
     }
 }

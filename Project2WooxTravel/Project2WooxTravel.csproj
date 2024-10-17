@@ -720,6 +720,7 @@
     <Content Include="wooxtravel-1.0.0\vendor\jquery\jquery.min.map" />
     <Content Include="wooxtravel-1.0.0\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
