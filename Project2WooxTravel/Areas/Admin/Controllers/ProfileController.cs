@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Project2WooxTravel.Context;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,10 +11,12 @@ namespace Project2WooxTravel.Areas.Admin.Controllers
     [Authorize]
     public class ProfileController : Controller
     {
-        // GET: Admin/Profile
+       TravelContext context = new TravelContext(); 
         public ActionResult Index()
         {
-            return View();
+            var a = Session["x"];
+            var values = context.Admins.Where(x=>x.Username ==a).FirstOrDefaultAsync(); 
+            return View(values);
         }
     }
 }
