@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project2WooxTravel.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace Project2WooxTravel.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+        TravelContext context = new TravelContext();    
         public ActionResult Index()
         {
             return View();
@@ -24,5 +25,25 @@ namespace Project2WooxTravel.Controllers
             return PartialView();
         }
 
+        public ActionResult PartialNavbar()
+        {
+            return PartialView();
+        }
+
+        public ActionResult PartialBanner()
+        {
+            return PartialView();
+        }
+
+        public ActionResult PartialCountry()
+        {
+            var values = context.Destinations.ToList();
+            return PartialView(values);
+        }
+
+        public ActionResult PartialFooter()
+        {
+            return PartialView();
+        }
     }
 }
